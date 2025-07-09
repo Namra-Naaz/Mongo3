@@ -18,18 +18,12 @@ main()
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/whatsapp');
 }
-
-//inserting data into char
-
-let chat1 = new Chat({
-    from: "neha",
-    to: "priya",
-    msg: "send me your exam sheets",
-    created_at: new Date()  //Z: UTC format 
+// Index Route
+app.get("/chats", async (req, res) => {
+  let chats =  await Chat.find(); //its an asynchronous func bezoc it bring data from db
+  console.log(chats);
+  res.send("working")
 })
-chat1.save().then((res) =>{
-    console.log(res);
-});
 
 
 //root path
