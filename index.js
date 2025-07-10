@@ -7,6 +7,7 @@ const Chat = require("./models/chat.js");
 
 app.set("views",path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname,"public")));
 
 main()
 .then(() => {
@@ -22,7 +23,7 @@ async function main() {
 app.get("/chats", async (req, res) => {
   let chats =  await Chat.find(); //its an asynchronous func bezoc it bring data from db
   console.log(chats);
-  res.send("working")
+  res.render("index.ejs",{chats});
 })
 
 

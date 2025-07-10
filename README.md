@@ -25,4 +25,5 @@ create file
 Name: Namra Naaz
 
 ## Index Route
-GET /chats-->show all chats
+GET /chats-->show all chats->>
+- index.ejs (showing chats on w page)
