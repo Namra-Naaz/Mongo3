@@ -27,3 +27,19 @@ Name: Namra Naaz
 ## Index Route
 GET /chats-->show all chats->>
 - index.ejs (showing chats on w page)
+
+POST /chats
+
+## Using Date and time.
+
+## Edit Route
+GET /chats/:id/edit -->edit from display -->msg edit
+
+PUT /chats/:id -->after submitting chages req goes to db
+
+## installing 
+- npm i method-override (to dlt and update)
+
+## Update route
+
+## Delete route
